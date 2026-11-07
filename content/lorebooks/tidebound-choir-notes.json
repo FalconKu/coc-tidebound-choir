@@ -2,6 +2,7 @@
   "id": "tidebound-choir-notes",
   "name": "盐喉村底牌",
   "language": "zh-CN",
+  "description": "《潮汐合唱》配套底牌：6 条玩家可查，12 条守秘人专属（十三个死者是本金、凹痕磨平是利息）。",
   "entries": [
     {
       "id": "npc-hester",
