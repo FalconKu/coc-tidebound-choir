@@ -8,8 +8,11 @@
   ],
   "id": "coc-tidebound-choir",
   "name": "潮汐合唱",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "《克苏鲁的呼唤》7 版原创短冒险：盐喉村每年交出一个名字，换取一年的渔获。这次被念到名字的是你受雇寻找的人。3 章 15 节点 4 结局，约 2 小时。",
+  "compatible_rulesets": [
+    "coc7"
+  ],
   "plugin_type": "content-pack",
   "content_profile": "adventure-module",
   "content_delivery_mode": "catalog",
