@@ -1,0 +1,19 @@
+{
+  "id": "village_square",
+  "name": "礼堂前",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "empty_clothes",
+    "hall",
+    "school",
+    "elder_house"
+  ],
+  "content": "礼堂改自鱼仓，鲸骨风铃无风也响。海丝特按着围裙口袋（礼堂侧门钥匙）。孩子在里面练歌，音节不成词。",
+  "keywords": [
+    "礼堂",
+    "海丝特",
+    "风铃",
+    "分岔"
+  ],
+  "tier": "core"
+}

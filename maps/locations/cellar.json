@@ -1,0 +1,17 @@
+{
+  "id": "cellar",
+  "name": "地窖（蓄水池）",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "hall",
+    "pipe_room"
+  ],
+  "content": "水面到脚踝。九根铜管竖在墙边，最粗那根刻 1889 和十三个凹痕，十二个磨平。圈里留着第十七个空位。",
+  "keywords": [
+    "地窖",
+    "铜管",
+    "凹痕",
+    "合唱"
+  ],
+  "tier": "core"
+}

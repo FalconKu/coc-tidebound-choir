@@ -1,0 +1,399 @@
+{
+  "schema_version": 2,
+  "kind": "adventure",
+  "id": "tidebound-choir",
+  "format": "diceframe:adventure-graph-v2",
+  "source_ref": "diceframe-original:coc-tidebound-choir",
+  "automation_level": "guided",
+  "name": "潮汐合唱",
+  "summary": "盐喉村每年交出一个名字换一年渔获。这次被念到名字的，是你受雇寻找的那个人。",
+  "estimated_minutes": 120,
+  "player_count": 3,
+  "chapters": [
+    {
+      "id": "ebb",
+      "name": "第一章：退潮的衣物"
+    },
+    {
+      "id": "cellar",
+      "name": "第二章：地窖与合唱"
+    },
+    {
+      "id": "bargain",
+      "name": "第三章：交换"
+    }
+  ],
+  "start_node_ids": [
+    "shore_road"
+  ],
+  "nodes": [
+    {
+      "id": "shore_road",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "村口的路",
+      "description": "班车扬尘离开后，咸味立刻盖住了尾气味。村口木牌刷着两遍白漆：「退潮别下滩。」路两侧晒着渔网，网眼比别处密，像是要拦住什么细小的东西。第一个开口的是个十岁上下的女孩，她问你们：「你们是来带奥古斯特走的吗？他已经交过了。」",
+      "transitions": [
+        {
+          "to": "empty_clothes"
+        }
+      ]
+    },
+    {
+      "id": "empty_clothes",
+      "type": "decision",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "三套叠好的衣服",
+      "description": "滩涂上三套衣服，按同一方式叠好，鞋尖朝海，压着石块。衣料是干的，内衬却全是湿的。\n\n三套衣服的口袋里各有东西：\n\n第一套（以法莲的）：一把折叠刀、一枚教堂钥匙、一张叠成四折的纸，写着「今晚念到我了」。\n第二套（海丝特的）：半包烟、一枚结婚戒指（摘下来的）、一小截麻绳。\n第三套（奥古斯特的）：收鱼商行会铅牌、一本记着数字的小册子、一张写着「14 号，退潮后」的纸条。\n\n退潮退到最低处，露出一条从滩涂通向礼堂下方的石缝。石缝边缘有新的刮痕。\n\n（海丝特的衣服在这里，但她人还活着——这是第一个矛盾。玩家如果现在想不通，记住它。）",
+      "transitions": [
+        {
+          "to": "august_room",
+          "choice_id": "search_august_room",
+          "choice_label": "回客栈，找奥古斯特的房间"
+        },
+        {
+          "to": "low_tide_walk",
+          "choice_id": "follow_the_stone_crack",
+          "choice_label": "顺着石缝走进去"
+        },
+        {
+          "to": "village_square",
+          "choice_id": "go_to_village_now",
+          "choice_label": "先进村，找人问话"
+        }
+      ],
+      "on_complete": [],
+      "choice_mode": "exclusive"
+    },
+    {
+      "id": "village_square",
+      "type": "decision",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "礼堂前的分岔",
+      "description": "礼堂改自鱼仓，门口挂着鲸骨做的风铃，无风也在响。里面传出练习过的歌声——是孩子在唱，音节不成词。\n\n村长妻子海丝特·豪站在门口。她是以法莲的妻子，也是三天前「交过」的人之一，此刻却好好站着，围裙上有汤渍。\n\n她说：「你们可以听，也可以问。别两样都做。」\n\n她身后是礼堂的木门，门缝里透出煤油灯的光；她左手边是通往村里的路；再往东，是学校的方向，能听见下课铃。\n\n（她的右手一直按在围裙口袋里——那里有一把钥匙，礼堂侧门的。）",
+      "choice_mode": "exclusive",
+      "transitions": [
+        {
+          "to": "night_hymn",
+          "choice_id": "follow_song",
+          "choice_label": "循着歌声进礼堂"
+        },
+        {
+          "to": "elder_house",
+          "choice_id": "question_hester",
+          "choice_label": "留下问她丈夫的事"
+        },
+        {
+          "to": "school_room",
+          "choice_id": "go_to_the_school",
+          "choice_label": "先去学校看看名单"
+        }
+      ]
+    },
+    {
+      "id": "elder_house",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "海丝特的厨房",
+      "description": "海丝特把你们让进厨房，灶上煮着鱼汤，汤面浮着一层油花。她不否认丈夫下海，也不承认他死了。\n\n她只反复说一句话：「名字念出来，人就得走，这是规矩，不是我们定的。」\n\n她手腕内侧有一圈旧的绳痕，和滩上衣服压石块用的麻绳同一种。绳痕是双圈的，像是自己绑的。\n\n灶台边贴着一张孩子的画，画的是海，海里竖着一根黑管子。\n\n她最后给了你们一把礼堂侧门的钥匙，条件是别在唱歌时进去。她说：「你们可以看。看完还想砸，那是你们的事。」\n\n（她说的每一句话都是真的，只是没说全。她知道自己儿子在名单上。）",
+      "transitions": [
+        {
+          "to": "night_hymn"
+        },
+        {
+          "to": "ice_house"
+        }
+      ]
+    },
+    {
+      "id": "night_hymn",
+      "type": "scene",
+      "chapter_id": "cellar",
+      "visibility": "public",
+      "name": "退潮后的合唱",
+      "description": "夜里十一点，潮退到最低。礼堂地板中央的活板门自己开了，下面是蓄水池改的地窖，水只剩脚踝深。\n\n十一个孩子围成一圈，面对着墙上一排竖立的铜管唱。铜管在震，声音顺着石缝往海里走。\n\n圈里空着一个位置——第十七个位置。孩子们不时往那里看一眼。站在那里的是海丝特的儿子，但他三天前已经「交过」了。\n\n（如果玩家数孩子：十一个。如果玩家数位置：十七个。名单上有二十一个名字，四个划掉。）",
+      "transitions": [
+        {
+          "to": "pipe_room"
+        }
+      ]
+    },
+    {
+      "id": "tide_cellar",
+      "type": "decision",
+      "chapter_id": "bargain",
+      "visibility": "public",
+      "name": "铜管与空位",
+      "description": "铜管一共九根，最粗那根上刻着 1889 和十三个凹痕，其中十二个被磨平了。\n\n孩子们停下的瞬间，地窖外的滩涂上传来回应的声音——低、慢，像很多人在水下同时开口。四秒一次。\n\n海丝特站在楼梯上，没有下来。她说：「今年还差一个。」\n\n你们只有这一次退潮的时间。四个选择：\n\n砸掉铜管——声音断，回应停，明年全村饥荒。\n带走一个孩子——合唱不齐，回应会找一夜，然后找别的。\n接过空位——替村子把今年的名字唱完，你们中的一个成为「自己人」。\n把全村带走——用剩下的退潮时间，把三十二户人从滩涂上赶出去。最难，也最慢。",
+      "choice_mode": "exclusive",
+      "transitions": [
+        {
+          "to": "ending_silence",
+          "choice_id": "break_the_pipes",
+          "choice_label": "砸掉铜管"
+        },
+        {
+          "to": "ending_theft",
+          "choice_id": "take_a_child",
+          "choice_label": "带走一个孩子"
+        },
+        {
+          "to": "ending_bargain",
+          "choice_id": "take_the_place",
+          "choice_label": "接过空位"
+        },
+        {
+          "to": "ending_flee",
+          "choice_id": "evacuate_the_village",
+          "choice_label": "把全村人带走"
+        }
+      ]
+    },
+    {
+      "id": "ending_silence",
+      "type": "ending",
+      "chapter_id": "bargain",
+      "visibility": "public",
+      "name": "结局：一年的哑",
+      "description": "铜管裂开时没有声响，只有一股咸水从裂口涌出。海面上的回应停了。三天后，盐喉村的渔获归零，接下来一年都是如此。村里没有人责怪你们，也没有人再和你们说话。孩子们不再唱歌，但其中一个从此不会说话。",
+      "transitions": []
+    },
+    {
+      "id": "ending_theft",
+      "type": "ending",
+      "chapter_id": "bargain",
+      "visibility": "public",
+      "name": "结局：少一个名字",
+      "description": "你们抱走了一个孩子。合唱断了，滩涂上的回应变成一种缓慢的、寻找的节奏，持续了整夜。第二天村里少了两条船，海丝特站在滩上看着你们，没有阻拦。孩子在车上一直很安静，直到你们问他的名字，他回答了一个你们从没听过的音节，然后笑了。",
+      "transitions": []
+    },
+    {
+      "id": "ending_bargain",
+      "type": "ending",
+      "chapter_id": "bargain",
+      "visibility": "public",
+      "name": "结局：第十三个凹痕",
+      "description": "你们中的一个走进圈里，孩子们重新开始唱，歌声里多了你们的名字。滩涂上的回应满意地退去，第二天村里渔获丰收，冰厂的车排到路口。留下的人被村里当成了自己人——海丝特给你们端来鱼汤，说：「今年过去了。」至于那个名字，每年这个时候，水里都会有人轻轻念一遍。",
+      "transitions": []
+    },
+    {
+      "id": "august_room",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "奥古斯特的房间",
+      "description": "客栈老板娘开了锁，站在门口不肯进。\n\n房间很小，一张床、一只皮箱、一张桌子。皮箱没锁，里面全是账：收鱼记录、行会凭据、以及一本私人小册子。\n\n小册子最后三页写的是同一个意思，用不同的措辞：「今年数字不对」「他们在凑人」「我要走」。最后一页只有一句：「14 号，退潮后，我要去看。」\n\n桌上有一封没写完的信，收信人是波士顿的合伙人：「这里的账不是账，是名——」\n\n窗户正对滩涂，窗台上有和布里格斯公寓一样的东西：三个只抽一半的烟头，方向朝屋内。\n\n（可调查：小册子、未写完的信、皮箱账目、窗外视线。可带走：小册子。）",
+      "transitions": [
+        {
+          "to": "village_square"
+        }
+      ]
+    },
+    {
+      "id": "low_tide_walk",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "石缝",
+      "description": "石缝只容一人侧身通过，退潮时露出水面约一英尺。壁上湿滑，有细小的、成串的划痕。\n\n走进去二十步，石缝通向礼堂地下的蓄水池——也就是后来那个地窖。你们能从下方听见上面有人在走动，脚步很轻，像孩子。\n\n石缝底部有一层薄水，水里沉着东西：一枚铜扣，一小截麻绳，还有一张被水泡软的纸，字迹模糊，能认出「念」和「十四」。\n\n（从这里上去，会被上面的人听见。需要一次潜行判定。失败则孩子们停下歌声，全部转头看向活板门。）",
+      "transitions": [
+        {
+          "to": "village_square"
+        }
+      ]
+    },
+    {
+      "id": "school_room",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "一间教室",
+      "description": "下课了，教室里没人。黑板上留着一行粉笔字，不是英语单词，也不是拉丁文，是音节。\n\n讲台上钉着班级名单，二十一个名字，四个划掉，划掉的日期分别是 6 月 3 日、6 月 19 日、7 月 2 日、7 月 21 日。\n\n第四个名字旁边有一行小字，是老师的笔迹：「豪家，七月」。\n\n教室后柜里有一叠画。大部分画海，其中五张画了同一根竖在水里的黑管子，管子旁边站着小小的、没有脸的人。\n\n（如果玩家把名单上的日期和滩涂衣服的日期对照：7 月 21 日，正是海丝特「交过」的那天。而她的名字没有被划掉。）",
+      "transitions": [
+        {
+          "to": "elder_house"
+        }
+      ]
+    },
+    {
+      "id": "ice_house",
+      "type": "scene",
+      "chapter_id": "ebb",
+      "visibility": "public",
+      "name": "冰厂出库账",
+      "description": "冰厂管事姓普拉特，来了六年，从不进村喝酒。他愿意谈生意，不愿意谈别的事。\n\n出库账摆在办公室，三十年。数据有个明显的洞：每年 6 月到 9 月，出货量稳定，次品率为零；其他季节有 3% 到 5% 的次品。夏季零次品，不合常理。\n\n普拉特的解释很简单：「夏天的鱼好。」\n\n他还会主动提一件事：过去三年，有两辆冷藏车在路上失踪，司机找回来了，车没有。他说这话时在擦柜台，没抬头。\n\n（账本的边角被翻得起毛，说明常有人查。查的人不是他。）",
+      "transitions": [
+        {
+          "to": "night_hymn"
+        }
+      ]
+    },
+    {
+      "id": "pipe_room",
+      "type": "scene",
+      "chapter_id": "cellar",
+      "visibility": "public",
+      "name": "管风琴维护间",
+      "description": "礼堂侧门进去，是管风琴的维护间，堆着工具、油布和旧谱。空气里有铜锈和鲸油的味道。\n\n谱架上放着一本用油布包着的手写账。翻开：前八页发黄，记着 1889 年那场风暴的十三个死者；后面三十七页是「收」的记录，格式一样——年份、姓名、当日潮汐、当年渔获增量。\n\n最近一页写着：「1926，奥古斯特·佩尔，退潮后，丰。」\n下一行空着，只画了一道横线。\n\n账本旁边有一支钢笔，笔尖还是湿的。\n\n（这是全场最关键的物证：它把「传说」变成了「记录」。拿到它，玩家再去地窖时，看到铜管就不会只是「诡异的仪式」，而是「一笔还在还的账」。）",
+      "transitions": [
+        {
+          "to": "tide_cellar"
+        }
+      ]
+    },
+    {
+      "id": "ending_flee",
+      "type": "ending",
+      "chapter_id": "bargain",
+      "visibility": "public",
+      "name": "结局：三十二户",
+      "description": "这是最慢、也最难的一个选择。\n\n你们只有一次退潮的时间。三十二户，老人、孩子、不肯走的人。冰厂的车能装九个人，普拉特愿意开，但要你们保证「别把我名字写进去」。\n\n天亮时，村里空了一半。剩下的人站在门口看你们，不说话，也不阻拦。海丝特抱着儿子站在最后，她说：「你们带走的是人，不是名字。名字还在。」\n\n第二年春天，盐喉村的渔获是三十年来第一次减产。到了夏天，村里来了新的人家，是从内陆搬来的，不知道规矩。\n\n那年 6 月，礼堂又开始有孩子的合唱。\n\n（这个结局没有解决任何事，只是把代价换了一种付法。守秘人应当如实描述，不要暗示它「更好」。）",
+      "transitions": []
+    }
+  ],
+  "objectives": [
+    {
+      "id": "find_august",
+      "name": "查明收鱼商奥古斯特·佩尔的下落",
+      "visibility": "public",
+      "node_ids": [
+        "empty_clothes",
+        "august_room",
+        "village_square",
+        "elder_house"
+      ]
+    },
+    {
+      "id": "understand_the_choir",
+      "name": "弄清楚夜里的合唱在交换什么",
+      "visibility": "public",
+      "node_ids": [
+        "school_room",
+        "night_hymn",
+        "pipe_room",
+        "tide_cellar"
+      ]
+    },
+    {
+      "id": "know_the_debt",
+      "name": "搞清这笔债还剩多少",
+      "visibility": "public",
+      "node_ids": [
+        "ice_house",
+        "pipe_room"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "heard_the_choir",
+      "name": "亲耳听见合唱",
+      "visibility": "public",
+      "node_ids": [
+        "night_hymn"
+      ]
+    },
+    {
+      "id": "found_the_ledger",
+      "name": "找到 1889 年账簿",
+      "visibility": "public",
+      "node_ids": [
+        "pipe_room"
+      ]
+    },
+    {
+      "id": "understood_hester",
+      "name": "明白海丝特为什么还活着",
+      "visibility": "public",
+      "node_ids": [
+        "school_room",
+        "elder_house"
+      ]
+    },
+    {
+      "id": "made_the_choice",
+      "name": "在地窖里做出选择",
+      "visibility": "public",
+      "node_ids": [
+        "tide_cellar"
+      ]
+    }
+  ],
+  "world_seed": {
+    "entities": [
+      {
+        "entity_id": "location:saltthroat",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:tide_cellar",
+        "kind": "location"
+      },
+      {
+        "entity_id": "npc:hester_howe",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "location:school",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:icehouse",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:pipe_room",
+        "kind": "location"
+      },
+      {
+        "entity_id": "item:ledger",
+        "kind": "item"
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "village-to-cellar",
+        "kind": "connects",
+        "from_ref": "location:saltthroat",
+        "to_ref": "location:tide_cellar"
+      }
+    ],
+    "facts": [
+      {
+        "key": "public:choir.every_year",
+        "value": "村里每年交出一个名字，换取一年渔获",
+        "visibility": "public"
+      },
+      {
+        "key": "gm:choir.ledger",
+        "value": "九根铜管是 1889 年立约时埋下的「账本」，每收一个名字磨平一个凹痕。剩下一个凹痕，就是今年。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:august.fate",
+        "value": "奥古斯特是被念到名字后自己走进海里的；他留下纸条「14 号，退潮后」是想让人看见铜管，而不是来救他。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:ledger.exists",
+        "value": "礼堂管风琴维护间藏着一本 1889 年起的账簿，记录每一次「收」的姓名与当年渔获增量。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:hester.role",
+        "value": "海丝特是唯一活着回来的「交过者」，代价是负责念名字；她手腕的绳痕是自己绑的。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:nina.knows",
+        "value": "十岁的妮娜知道自己可能在名单上，且并不害怕——「交过的人，家里渔获最好」。",
+        "visibility": "gm"
+      }
+    ],
+    "processes": []
+  }
+}

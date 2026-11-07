@@ -1,0 +1,17 @@
+{
+  "id": "empty_clothes",
+  "name": "滩涂",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "shore_road",
+    "village_square"
+  ],
+  "content": "三套衣服按同一方式叠好，鞋尖朝海压石块。衣料干内衬湿。退潮最低处露出通向礼堂下方的石缝。",
+  "keywords": [
+    "滩涂",
+    "衣服",
+    "石缝",
+    "纸条"
+  ],
+  "tier": "core"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "shore_road",
+  "name": "村口的路",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "inn",
+    "empty_clothes"
+  ],
+  "content": "木牌刷两遍白漆「退潮别下滩」，字是新的。「退潮别下滩」的漆边上有一道指甲刮痕。晒网网眼密到指头伸不过去。",
+  "keywords": [
+    "村口",
+    "木牌",
+    "渔网",
+    "班车"
+  ],
+  "tier": "background"
+}

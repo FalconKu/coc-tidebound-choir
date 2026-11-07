@@ -1,0 +1,17 @@
+{
+  "id": "pipe_room",
+  "name": "管风琴维护间",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "hall",
+    "cellar"
+  ],
+  "content": "油布包着的手写账簿，前八页发黄。旁边钢笔笔尖还是湿的。",
+  "keywords": [
+    "维护间",
+    "账簿",
+    "钢笔",
+    "油布"
+  ],
+  "tier": "core"
+}

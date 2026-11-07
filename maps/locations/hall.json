@@ -1,0 +1,17 @@
+{
+  "id": "hall",
+  "name": "礼堂",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "village_square",
+    "cellar"
+  ],
+  "content": "门口鲸骨风铃。地板中央有活板门，通往地窖。侧门锁着，钥匙在海丝特手里。",
+  "keywords": [
+    "礼堂",
+    "活板门",
+    "侧门",
+    "管风琴"
+  ],
+  "tier": "background"
+}

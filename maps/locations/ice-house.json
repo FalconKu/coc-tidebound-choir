@@ -1,0 +1,17 @@
+{
+  "id": "ice_house",
+  "name": "冰厂",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "elder_house",
+    "shore_road"
+  ],
+  "content": "两辆冷藏车。出库账显示 6–9 月次品率为零，其他季节 3–5%。三年内两辆车失踪，司机回来了车没有。",
+  "keywords": [
+    "冰厂",
+    "出库账",
+    "冷藏车",
+    "普拉特"
+  ],
+  "tier": "background"
+}

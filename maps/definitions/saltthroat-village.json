@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "saltthroat-village",
+  "name": "盐喉村",
+  "mode": "graph",
+  "worlds": [
+    "saltthroat"
+  ],
+  "default": true,
+  "nodes": [
+    {
+      "location_ref": "shore_road",
+      "x": 0,
+      "y": 38
+    },
+    {
+      "location_ref": "empty_clothes",
+      "x": 22,
+      "y": 26
+    },
+    {
+      "location_ref": "inn",
+      "x": -16,
+      "y": 32
+    },
+    {
+      "location_ref": "august_room",
+      "x": -16,
+      "y": 20
+    },
+    {
+      "location_ref": "village_square",
+      "x": 0,
+      "y": 10
+    },
+    {
+      "location_ref": "hall",
+      "x": -12,
+      "y": 0
+    },
+    {
+      "location_ref": "cellar",
+      "x": -12,
+      "y": -10
+    },
+    {
+      "location_ref": "pipe_room",
+      "x": -22,
+      "y": -16
+    },
+    {
+      "location_ref": "school",
+      "x": 18,
+      "y": 4
+    },
+    {
+      "location_ref": "elder_house",
+      "x": 16,
+      "y": -8
+    },
+    {
+      "location_ref": "ice_house",
+      "x": 32,
+      "y": -24
+    }
+  ],
+  "default_view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  }
+}

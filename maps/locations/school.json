@@ -1,0 +1,17 @@
+{
+  "id": "school",
+  "name": "村小学",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "village_square",
+    "elder_house"
+  ],
+  "content": "黑板留音节练习。名单二十一个名字，四个划掉，日期分别是 6/3、6/19、7/2、7/21。后柜五张画着黑管子。",
+  "keywords": [
+    "学校",
+    "名单",
+    "黑板",
+    "画"
+  ],
+  "tier": "background"
+}

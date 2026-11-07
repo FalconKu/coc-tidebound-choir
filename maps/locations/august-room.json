@@ -1,0 +1,17 @@
+{
+  "id": "august_room",
+  "name": "奥古斯特的房间",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "inn",
+    "village_square"
+  ],
+  "content": "皮箱全是账，小册子最后三页写「今年数字不对」「他们在凑人」。未写完的信：「这里的账不是账，是名——」",
+  "keywords": [
+    "房间",
+    "账",
+    "信",
+    "小册子"
+  ],
+  "tier": "background"
+}

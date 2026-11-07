@@ -1,0 +1,17 @@
+{
+  "id": "inn",
+  "name": "退潮客栈",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "shore_road",
+    "august_room"
+  ],
+  "content": "四间房，一间锁着。墙钉三十年渔获记录，1926 年那张空着写「今年还没定」。登记簿显示上周来过「收账的」。",
+  "keywords": [
+    "客栈",
+    "房间",
+    "登记簿",
+    "照片"
+  ],
+  "tier": "background"
+}

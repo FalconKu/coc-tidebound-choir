@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "content_schema_version": 2,
+  "locale_schema_version": 1,
+  "default_locale": "zh-CN",
+  "supported_locales": [
+    "zh-CN"
+  ],
+  "id": "coc-tidebound-choir",
+  "name": "潮汐合唱",
+  "version": "1.0.0",
+  "description": "《克苏鲁的呼唤》7 版原创短冒险：盐喉村每年交出一个名字，换取一年的渔获。这次被念到名字的是你受雇寻找的人。约 2 小时，3 个结局。",
+  "plugin_type": "content-pack",
+  "content_profile": "adventure-module",
+  "content_delivery_mode": "catalog",
+  "license": "CC-BY-NC-4.0",
+  "config_schema": "config.schema.json",
+  "adventure_packages": [
+    "adventures/tidebound-choir"
+  ],
+  "capabilities": [
+    "content.world"
+  ],
+  "permissions": [
+    "content.read"
+  ],
+  "contributes": {
+    "world_templates": [
+      "content/worlds/*.json"
+    ],
+    "lorebooks": [
+      "content/lorebooks/*.json"
+    ],
+    "map_definitions": [
+      "maps/definitions/*.json"
+    ],
+    "map_locations": [
+      "maps/locations/*.json"
+    ]
+  },
+  "docs": "README.md"
+}

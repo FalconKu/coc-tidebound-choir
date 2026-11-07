@@ -1,0 +1,18 @@
+{
+  "id": "elder_house",
+  "name": "海丝特的厨房",
+  "world_id": "saltthroat",
+  "connected_to": [
+    "village_square",
+    "ice_house",
+    "school"
+  ],
+  "content": "灶上鱼汤浮油花。手腕内侧双圈绳痕。灶台边贴着孩子画的海和黑管子。给了礼堂侧门钥匙。",
+  "keywords": [
+    "厨房",
+    "海丝特",
+    "绳痕",
+    "钥匙"
+  ],
+  "tier": "background"
+}

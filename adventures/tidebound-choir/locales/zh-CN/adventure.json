@@ -1,0 +1,14 @@
+{
+  "locale_schema_version": 1,
+  "locale": "zh-CN",
+  "target": {
+    "kind": "adventure",
+    "id": "tidebound-choir"
+  },
+  "fields": {
+    "tutorial": {
+      "name": "潮汐合唱",
+      "summary": "盐喉村每年交出一个名字换一年渔获。这次被念到名字的，是你受雇寻找的那个人。"
+    }
+  }
+}
